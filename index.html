@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Simple gray background with anime silhouette aesthetic -->
+    <div class="background-container">
+        <!-- Optional: Video/GIF background can be added here -->
+        <video id="bg-video" class="background-media" autoplay loop muted playsinline>
+            <source src="assets/arkaplan.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="intro-overlay" class="intro-overlay" role="button" tabindex="0" aria-label="Enter site">
+        <div class="intro-overlay-inner">
+            <div class="intro-enter-text">CLICK TO ENTER</div>
+        </div>
+    </div>
+
+    <main class="page">
+        <!-- LEFT PROFILE CARD -->
+        <div class="profile side-profile left-profile" id="left-profile">
+            <div class="avatar-container">
+                <img id="left-avatar" src="" alt="Avatar" class="avatar">
+            </div>
+            <h1 id="left-username" class="username">Loading...</h1>
+            <div id="left-presence" class="presence-bar">
+                <div class="status-dot-container">
+                    <div id="left-status-dot" class="status-dot"></div>
+                </div>
+                <span id="left-status-text" class="status-text">Offline</span>
+            </div>
+            <div id="left-activity" class="activity-box">
+                <i class="fab fa-discord"></i>
+                <span>...</span>
+            </div>
+            <div class="custom-status">
+                <span id="left-links"></span>
+            </div>
+
+            <!-- Spotify Music Section -->
+            <section class="spotify-music-player" aria-label="Now Playing">
+                <div class="album-cover-container" aria-hidden="true">
+                    <img id="left-album-cover" src="" alt="Album Cover" class="album-cover hidden">
+                    <div class="album-placeholder">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                </div>
+
+                <div class="spotify-meta">
+                    <div class="song-title" id="left-song-title">Not playing</div>
+                    <div class="song-artist" id="left-song-artist">Spotify</div>
+                    <div class="track-progress" aria-hidden="true">
+                        <div id="left-track-progress-bar" class="track-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="music-controls" aria-hidden="true">
+                    <button id="left-prev-btn" class="music-btn" title="Previous" type="button">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="left-play-pause-btn" class="music-btn play-pause" title="Play/Pause" type="button">
+                        <i id="left-play-icon" class="fas fa-play"></i>
+                        <i id="left-pause-icon" class="fas fa-pause hidden"></i>
+                    </button>
+                    <button id="left-next-btn" class="music-btn" title="Next" type="button">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+            </section>
+
+            <div class="view-counter" aria-label="Views">
+                <svg class="view-counter-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2.2 12s3.6-7 9.8-7 9.8 7 9.8 7-3.6 7-9.8 7-9.8-7-9.8-7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span id="left-view-count" class="view-counter-text">Turkiye</span>
+            </div>
+        </div>
+
+        <!-- RIGHT PROFILE CARD -->
+        <div class="profile side-profile right-profile" id="right-profile">
+            <div class="avatar-container">
+                <img id="right-avatar" src="" alt="Avatar" class="avatar">
+            </div>
+            <h1 id="right-username" class="username">Loading...</h1>
+            <div id="right-presence" class="presence-bar">
+                <div class="status-dot-container">
+                    <div id="right-status-dot" class="status-dot"></div>
+                </div>
+                <span id="right-status-text" class="status-text">Offline</span>
+            </div>
+            <div id="right-activity" class="activity-box">
+                <i class="fab fa-discord"></i>
+                <span>...</span>
+            </div>
+            <div class="custom-status">
+                <span id="right-links">22.12</span>
+            </div>
+
+            <!-- Spotify Music Section -->
+            <section class="spotify-music-player" aria-label="Now Playing">
+                <div class="album-cover-container" aria-hidden="true">
+                    <img id="right-album-cover" src="" alt="Album Cover" class="album-cover hidden">
+                    <div class="album-placeholder">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                </div>
+
+                <div class="spotify-meta">
+                    <div class="song-title" id="right-song-title">Not playing</div>
+                    <div class="song-artist" id="right-song-artist">Spotify</div>
+                    <div class="track-progress" aria-hidden="true">
+                        <div id="right-track-progress-bar" class="track-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="music-controls" aria-hidden="true">
+                    <button id="right-prev-btn" class="music-btn" title="Previous" type="button">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="right-play-pause-btn" class="music-btn play-pause" title="Play/Pause" type="button">
+                        <i id="right-play-icon" class="fas fa-play"></i>
+                        <i id="right-pause-icon" class="fas fa-pause hidden"></i>
+                    </button>
+                    <button id="right-next-btn" class="music-btn" title="Next" type="button">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+            </section>
+
+            <div class="view-counter" aria-label="Views">
+                <svg class="view-counter-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2.2 12s3.6-7 9.8-7 9.8 7 9.8 7-3.6 7-9.8 7-9.8-7-9.8-7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span id="right-view-count" class="view-counter-text">Turkiye</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Audio element for music player -->
+    <audio id="background-music"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
